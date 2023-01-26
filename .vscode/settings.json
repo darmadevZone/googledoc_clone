@@ -1,0 +1,18 @@
+{
+    "emulator.emulatorPathMac": "/Users/takuto/.android/avd",
+    "[dart][flutter]": {
+        "editor.defaultFormatter": "Dart-Code.flutter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "quickfix.insertSemicolon": true,
+        }
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true,
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    }
+}
