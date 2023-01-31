@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRouter = require("./routers/auth");
+const documentRouter = require("./routers/document");
 
 const PORT = process.env.PORT | 3001;
 
@@ -14,7 +15,9 @@ app.use(cors());
 //use to json middleware
 app.use(express.json());
 //middleware
+//Router
 app.use(authRouter);
+app.use(documentRouter);
 /**
  * app.listen(PORT, () => {
   console.log(`conneced at port ${PORT}`);

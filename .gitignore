@@ -43,4 +43,7 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-server/node_modules/
+server/.gitignore
+windows/
+macos/
+linux/

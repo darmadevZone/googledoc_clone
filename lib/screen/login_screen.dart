@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_doc_clone_app/colors.dart';
-import 'package:google_doc_clone_app/repository/auth_repository.dart';
-import 'package:google_doc_clone_app/screen/home_screen.dart';
+import 'package:google_doc_clone_app/repositories/auth_repository.dart';
+import 'package:routemaster/routemaster.dart';
+
+import '../constants/colors.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
@@ -11,15 +12,13 @@ class LoginScreen extends ConsumerWidget {
     final sMessenger = ScaffoldMessenger.of(context);
     final errorModel =
         await ref.read(authRepositoryProvider).signInWithGoogle();
-    final navigator = Navigator.of(context);
+    final navigator = Routemaster.of(context);
 
     //signInWithGoogle サインイン成功
     if (errorModel.error == null) {
       //login 成功
       ref.read(userProvider.notifier).update((_) => errorModel.data);
-      navigator.push(MaterialPageRoute(
-        builder: (context) => const HomeScreen(),
-      ));
+      navigator.replace("/");
     } else {
       //login 失敗
       sMessenger

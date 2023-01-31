@@ -5,6 +5,8 @@
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "quickfix.insertSemicolon": true,
+            "quickfix.convert.toRelativeImport": true,
+            "quickfix.add.trailingComma": true
         }
     },
     "[html]": {
@@ -14,5 +16,5 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
-    }
+    },
 }
